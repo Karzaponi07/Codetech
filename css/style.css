@@ -24,7 +24,7 @@
 
 /* Biciletas */
 @import "./bicicletas/bicicletas.css";
-@import "./bicicletas/bicicletas-lista.css";
+@import "./bicicletas/servicos-lista.css";
 
 /* Bicileta */
 @import "./bicicleta/bicicleta.css";
@@ -39,3 +39,18 @@
 
 /* Termos */
 @import "./termos/termos.css";
+
+/* login */
+@import "./login/login.css";
+
+/* Cadastro */
+@import "./cadastro/cadastro.css";
+
+/* Cadastro */
+@import "./pagina_dois/pagina_dois.css";
+
+/* Energia*/
+@import "./energia/energia.css";
+
+/* Descarte*/
+@import "./descarte/descarte.css";

@@ -16,15 +16,18 @@
 }
 
 .introducao-conteudo {
+  margin-top: 20px;
   align-self: end;
   padding-bottom: 200px;
 }
 
 .introducao h1 {
+  font-size: 50px;
   margin-bottom: 32px;
 }
 
 .introducao p {
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
