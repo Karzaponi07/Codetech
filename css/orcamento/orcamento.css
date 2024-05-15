@@ -1,5 +1,5 @@
 #orcamento {
-  background-image: linear-gradient(var(--cor-11) 700px, var(--cor-1) 0px);
+  background: linear-gradient(var(--cor-11) 700px, var(--cor-1) 0px);
 }
 
 .orcamento {

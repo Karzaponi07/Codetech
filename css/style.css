@@ -37,8 +37,6 @@
 /* Orçamento */
 @import "./orcamento/orcamento.css";
 
-/* Termos */
-@import "./termos/termos.css";
 
 /* login */
 @import "./login/login.css";
@@ -54,3 +52,6 @@
 
 /* Descarte*/
 @import "./descarte/descarte.css";
+
+@import "./compromisso/compromisso.css";
+

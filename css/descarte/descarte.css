@@ -1,124 +1,110 @@
-#myChart {
-    width: 200px;
-    height: 150px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
 }
 
 
-/* Estilos para o formulário */
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff; /* Fundo branco para o formulário */
+h1 {
+    text-align: center;
+}
+
+/* Estilo para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid #888;
+    width: 80%;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-    color: #555; /* Cor de texto mais escura */
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box; /* Para incluir o padding na largura total */
-}
-
-input[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Efeito de transição suave */
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse */
-}
-
-/* Estilos para o resultado */
-#resultado {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background-color: #f0f0f0; /* Cor de fundo para o resultado */
-}
-
-/* Estilos para o botão de adicionar */
-#adicionarAparelho {
-    width: 100%;
-    padding: 12px;
-    background-color: #44dd07;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Efeito de transição suave */
-    margin-top: 10px; /* Espaçamento superior */
-}
-
-#adicionarAparelho:hover {
-    background-color: #49fc02; /* Altera a cor de fundo ao passar o mouse */
-}
-
-/* Estilos para a lista suspensa de aparelhos */
-#aparelhoInput {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 16px;
-    overflow-y: auto; /* Adiciona barra de rolagem vertical */
-    max-height: 150px; /* Altura máxima da lista suspensa */
-}
-
-#aparelhoInput option {
-    font-size: 16px;
-    background-color: #f8f9fa; /* Cor de fundo */
-    color: #333; /* Cor do texto */
-    padding: 8px;
-    border-bottom: 1px solid #ddd; /* Linha separadora */
-}
-
-#aparelhoInput option:last-child {
-    border-bottom: none; /* Remover a linha separadora do último item */
-}
-
-/* Estilos para a lista de aparelhos selecionados */
-#aparelhosSelecionados {
-    margin-top: 20px;
-}
-
-#aparelhosSelecionados h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-#listaAparelhos {
-    list-style: none;
-    padding: 0;
-}
-
-#listaAparelhos li {
-    margin-bottom: 5px;
-    font-size: 16px;
-}
-
-#listaAparelhos li::before {
-    content: "\2713"; /* Código unicode para o ícone de marca de verificação */
-    color: #ff0000; /* Cor do ícone */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em; /* Alinha o ícone com o texto */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para o texto "Ano de 2023" e "Ano de 2024" */
+#currentYearPanel {
+    display: none;
+}
+
+/* Estilo para o canvas */
+#myChart {
+    margin-top: 30px; /* Adiciona um espaçamento superior */
+    width: 30%;
+    height: auto;
+}
+
+/* Estilos para todos os botões */
+button  {
+display:list-item;
+margin: 10px;
+  padding: 16px 15px;
+  background: linear-gradient(#ffbf00, #f2a50c);
+  box-shadow: 0px 1px 2px rgb(255, 255, 255);
+  border-radius: 4px;
+  text-transform: uppercase;
+  font: 600 1.125rem/1.35 "Poppins", sans-serif;
+  color: var(--cor-p5);
+  max-width: max-content;
+  border: none;
+  cursor: pointer;
+}
+
+/* Efeito de hover para os botões */
+button:hover {
+    background-color: #0056b3; /* Altera a cor de fundo ao passar o cursor */
+    transform: translateY(-2px); /* Desloca o botão para cima ao passar o cursor */
+}
+
+/* Efeito de pressionar para os botões */
+button:active {
+    background-color: #003d80; /* Altera a cor de fundo quando o botão é pressionado */
+    transform: translateY(1px); /* Desloca o botão para baixo quando pressionado */
+}
+
+/* Estilo para o ícone de olho */
+.toggle-password {
+    position: relative;
+    top: -25px;
+    right: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Estilo para o ícone de olho quando a senha está visível */
+.toggle-password.active::after {
+    content: "\f070"; /* Unicode para o ícone de olho aberto */
+}
+
+/* Estilo para o ícone de olho quando a senha está oculta */
+.toggle-password::after {
+    content: "\f06e"; /* Unicode para o ícone de olho fechado */
+    font-family: "Font Awesome"; /* Use uma biblioteca de ícones como o Font Awesome */
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 18px;
 }
